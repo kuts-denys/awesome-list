@@ -1,0 +1,113 @@
+.body {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    margin: 80px auto 0;
+    width: 80%;
+}
+
+.search {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input {
+    margin-left: 20px;
+    padding: 5px 10px;
+    width: 20%;
+}
+
+.all-tags-wrapper {
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.all-tags-wrapper span {
+    display: block;
+    margin-right: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F4F4F4;
+    cursor: pointer;
+    user-select: none;
+}
+
+.all-tags-wrapper span:hover {
+    background-color: #DCD0C0;
+}
+
+.all-tags-wrapper span.active {
+    background-color: #373737;
+    color: #C0B283;
+}
+
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 10px 10px 40px;
+    width: 50%;
+    background-color: #F4F4F4;
+    box-shadow: 1px 0 25px 0 rgba(0,0,0,0.75);
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("https://d30y9cdsu7xlg0.cloudfront.net/png/52944-200.png") no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+    user-select: none;
+}
+
+.post img {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.post h2 {
+    margin: 0 0 15px;
+    color: #C0B283;
+}
+
+.post-date {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-style: italic;
+}
+
+.post-tags {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+}
+
+.post-tags span {
+    display: block;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #8c7f59;
+    color: white;
+}
