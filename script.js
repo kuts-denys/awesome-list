@@ -223,9 +223,19 @@ fetch('https://api.myjson.com/bins/152f9j')
 
 
     function scrollHandler() {
+      let lastScrollCounter;
+      let lastDocumentHeight;
+      let newDocumentHeight;
       if (window.pageYOffset > document.documentElement.scrollHeight - document.documentElement.clientHeight - 100) {
+        lastScrollCounter = scrollCounter;
         scrollCounter += 1;
+        lastDocumentHeight = document.documentElement.scrollHeight;
         render(allPosts, scrollCounter);
+        newDocumentHeight = document.documentElement.scrollHeight;
+      }
+      if (newDocumentHeight <= lastDocumentHeight) {
+        scrollCounter = lastScrollCounter;
+        return;
       }
     }
     window.addEventListener('scroll', throttle(scrollHandler, 50));
