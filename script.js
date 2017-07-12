@@ -192,6 +192,7 @@ fetch('https://api.myjson.com/bins/152f9j')
     const tagsWrapper = document.querySelector('.all-tags-wrapper');
     let scrollCounter = 1;
     searchInput.addEventListener('input', () => {
+      scrollCounter = 1;
       render(allPosts, scrollCounter);
     });
     root.addEventListener('click', (event) => {
